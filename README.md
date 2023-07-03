@@ -50,6 +50,10 @@ to 0 on both the signals.(that can be inferred from 7 segment display outputs di
 to 0. (that can be inferred from 7 segment display outputs displayH, displayM.
 
 ## Zybo implementation:
+
+Seven segment displays: <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/1272e17a-783a-490e-b198-faedbc946150)
+
 The first two LED’s green and red are for highway, next two LED’s are for cross road. Yellow LED is clk_1s. <br/>
 Mainroad_state:(highway green)
 ![image](https://github.com/112101011/Traffic-lights./assets/111628378/200828b5-b47b-4518-ba47-7561953517ba)
