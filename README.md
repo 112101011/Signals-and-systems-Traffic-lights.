@@ -22,6 +22,19 @@ Code, Port connections description:
 3. The code is written such that whenever cross road green is on main road red will be on. And in the both the signals the countdown goes from 5 to 0.
 4. And this will repeat.
 
+## Implementation in vivado software:
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/77ed83e7-c843-45f5-89ff-0cca1f010634)
+
+The following test bench is written to simulate some test cases: <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/0e075a64-3640-435a-a049-58fb0eea6e09)
+
+Port connections (Zybo board): <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/6a29da46-f4c0-4223-ba56-367cea601f5d)
+
+Schematic: <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/ba74f2f1-2168-49ac-bf48-24f4b122cd0e)
+
+
 ## Timing diagrams:
 
 ![image](https://github.com/112101011/Traffic-lights./assets/111628378/d610fb65-05c9-48c8-9abd-0decc4987457) <br/>
@@ -42,8 +55,6 @@ Mainroad_state:(highway green)
 ![image](https://github.com/112101011/Traffic-lights./assets/111628378/200828b5-b47b-4518-ba47-7561953517ba)
 Crossroad_state:(cross road green) <br/>
 ![image](https://github.com/112101011/Traffic-lights./assets/111628378/6c4b8c45-72c1-4ea2-b517-2cfedbb130c9)
-
-
 
 Observations:
 1) Whenever the system is in mainroad state, Green LED of highway is glowing and red LED of cross road is glowing, remaining bulbs will are in OFF. With countdowns from 7 to 0 on both seven segment displays.
