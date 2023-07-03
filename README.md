@@ -16,4 +16,8 @@ First the reset pin will be clicked where highway green will be on, and both hig
 Flow diagram: <br/>
 ![image](https://github.com/112101011/Traffic-lights./assets/111628378/31f25d6c-ae70-4e61-a9fa-d5741b1027d0)
 
-
+Code, Port connections description:
+1. In code module generate_1s is used to slow down the clock of zybo at L16 pin whose frequency is 125Mhz. That is done by counter. where the clk_1s is generated where for 62.5Mhz clk_1s is high and remaining 6.25MHz clk_1s is low.
+2. The code is written such that whenever main road green is on cross road red will be on. And in both the signals the countdown goes from 7 to 0.
+3. The code is written such that whenever cross road green is on main road red will be on. And in the both the signals the countdown goes from 5 to 0.
+4. And this will repeat.
