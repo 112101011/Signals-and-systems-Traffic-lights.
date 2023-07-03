@@ -10,11 +10,11 @@ c) Use two 7-segment displays for displaying the counter values, red and green L
 ## Description of approach:
 X is taken as 7 and Y is taken as 5 here. There are two states as described in below picture <br/>
 **State diagram:** <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/fbfdb097-058b-47f9-987c-66910eddf844)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/57755a5a-caf8-41ce-9b93-cf32af5aad6b)
 
 First the reset pin will be clicked where highway green will be on, and both highway and crossroad count will be set to 7.and the next steps goes as follows: <br/>
 Flow diagram: <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/31f25d6c-ae70-4e61-a9fa-d5741b1027d0)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/2db2f7e2-1be4-4c05-af32-09b108f5013c)
 
 Code, Port connections description:
 1. In code module generate_1s is used to slow down the clock of zybo at L16 pin whose frequency is 125Mhz. That is done by counter. where the clk_1s is generated where for 62.5Mhz clk_1s is high and remaining 6.25MHz clk_1s is low.
@@ -23,24 +23,22 @@ Code, Port connections description:
 4. And this will repeat.
 
 ## Implementation in vivado software:
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/77ed83e7-c843-45f5-89ff-0cca1f010634)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/c63a03f4-5690-4598-89c7-e535d3b2fef3)
 
 The following test bench is written to simulate some test cases: <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/0e075a64-3640-435a-a049-58fb0eea6e09)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/e4993bf3-91ca-4ef3-b289-77dcdf3f25e7)
 
 Port connections (Zybo board): <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/6a29da46-f4c0-4223-ba56-367cea601f5d)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/19232dd1-7d0e-4a77-8307-a5d417d92f90)
 
 Schematic: <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/ba74f2f1-2168-49ac-bf48-24f4b122cd0e)
-
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/18eaa55a-7902-4d5c-a5f4-79e287756819)
 
 ## Timing diagrams:
 
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/d610fb65-05c9-48c8-9abd-0decc4987457) <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/a58851b7-1fd5-44a0-a973-efb43dc19241)
 
-
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/ca596077-78e7-4526-80fa-6643d0ca799b) <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/0b6f2122-f5dc-488c-8005-f95c3bb10e48)
 
 Observations:
 From simulations we can infer that:
@@ -52,13 +50,14 @@ to 0. (that can be inferred from 7 segment display outputs displayH, displayM.
 ## Zybo implementation:
 
 Seven segment displays: <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/1272e17a-783a-490e-b198-faedbc946150)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/1e207c4f-5346-419f-be64-047b7d43108b)
 
 The first two LED’s green and red are for highway, next two LED’s are for cross road. Yellow LED is clk_1s. <br/>
 Mainroad_state:(highway green)
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/200828b5-b47b-4518-ba47-7561953517ba)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/f4186258-5637-4358-8330-f66bd7daaea7)
+
 Crossroad_state:(cross road green) <br/>
-![image](https://github.com/112101011/Traffic-lights./assets/111628378/6c4b8c45-72c1-4ea2-b517-2cfedbb130c9)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/493b93b4-2a7c-43d2-a820-cb90932e5b66)
 
 Observations:
 1) Whenever the system is in mainroad state, Green LED of highway is glowing and red LED of cross road is glowing, remaining bulbs will are in OFF. With countdowns from 7 to 0 on both seven segment displays.
