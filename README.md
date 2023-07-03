@@ -1,6 +1,9 @@
 # Files discription:
+1) File source_code.v has verilog ode to implement traffic lights on real hardware that is Zybo board.
+2) test_bench.v has test bench to test the code.
+3) portconnections.xdc has port connections to zybo board.
 
-
+# Traffic Lights:
 ## Problem statement:
 Implement a traffic light controller on Zybo. There is a highway and a crossroad, with a time counter, red and green traffic lights on each direction. When green light is on in one direction (say H: Highway), red is on in the other direction (say C: Crossroad), and the counter starts counting down from X to 0. Once the counter hits 0, the red traffic light should be on in H and green in C with the counter in C starting to count down from Y to 0. This should keep alternating. Come up with a nice state diagram, Verilog code at FSM abstraction and implement it on Zybo. <br/>
 a) X and Y can be any number between 1 to 7. Use high value for highway counter and low value for crossroad counter to create more realistic scenario. <br/>
