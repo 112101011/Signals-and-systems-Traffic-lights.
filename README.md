@@ -2,6 +2,7 @@
 1) File source_code.v has verilog ode to implement traffic lights on real hardware that is Zybo board.
 2) test_bench.v has test bench to test the code.
 3) portconnections.xdc has port connections to zybo board.
+4) zyboreference manual pdf has reference to the zybo board. (port connections etc..)
 
 # Traffic Lights:
 ## Problem statement:
