@@ -21,3 +21,30 @@ Code, Port connections description:
 2. The code is written such that whenever main road green is on cross road red will be on. And in both the signals the countdown goes from 7 to 0.
 3. The code is written such that whenever cross road green is on main road red will be on. And in the both the signals the countdown goes from 5 to 0.
 4. And this will repeat.
+
+## Timing diagrams:
+
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/d610fb65-05c9-48c8-9abd-0decc4987457) <br/>
+
+
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/ca596077-78e7-4526-80fa-6643d0ca799b) <br/>
+
+Observations:
+From simulations we can infer that:
+1) Whenever highway green is ON, highway red and crossroad green will be OFF, crossroad red will be ON. With countdown from 7
+to 0 on both the signals.(that can be inferred from 7 segment display outputs displayH, displayM.
+2) Whenever crossroad green is ON, highway green and crossroad red will be OFF, highway red will be ON. With countdown from 5
+to 0. (that can be inferred from 7 segment display outputs displayH, displayM.
+
+## Zybo implementation:
+The first two LED’s green and red are for highway, next two LED’s are for cross road. Yellow LED is clk_1s. <br/>
+Mainroad_state:(highway green)
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/200828b5-b47b-4518-ba47-7561953517ba)
+Crossroad_state:(cross road green) <br/>
+![image](https://github.com/112101011/Traffic-lights./assets/111628378/6c4b8c45-72c1-4ea2-b517-2cfedbb130c9)
+
+
+
+Observations:
+1) Whenever the system is in mainroad state, Green LED of highway is glowing and red LED of cross road is glowing, remaining bulbs will are in OFF. With countdowns from 7 to 0 on both seven segment displays.
+2) Whenever the system is in crossroad state, Green LED of crossroad is glowing and red LED of highway is glowing, remaining bulbs will are in OFF. With countdowns from 5 to 0 on both seven segment displays.
